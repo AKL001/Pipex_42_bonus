@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "../includes/pipex.h"
+
 
 void	here_doc_fail(void)
 {
@@ -43,4 +44,11 @@ void	close_all_pipes(t_pipex *pipex)
 		close(pipex->pipefd[j][0]);
 		close(pipex->pipefd[j][1]);
 	}
+}
+
+void	exec_path_failed(char **cmd)
+{
+	perror("error");
+	ft_free(cmd);
+	exit(1);
 }

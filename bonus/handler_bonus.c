@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "../includes/pipex.h"
+
 
 void	handle_first_cmd(t_pipex *pipex, int i);
 void	handle_last_cmd(t_pipex *pipex, int i);

@@ -1,12 +1,29 @@
 PROG = pipex
+
 PROG_B = pipex_bonus
-SRCS_B = pipex_bonus.c herdoc_utils.c bonus_utils.c bonus_utils2.c bonus_utils3.c bonus_utils4.c utils2.c
+
+SRCS_B = bonus/pipex_bonus.c\
+		 bonus/herdoc_utils.c\
+		 bonus/handler_bonus.c\
+		 bonus/executor_bonus.c\
+		 bonus/error_utils_bonus.c\
+		 bonus/cleanups.c\
+
 OBJS_B = $(SRCS_B:.c=.o)
-SRCS = pipex.c utils.c utils2.c
+
+SRCS = mandatory/pipex.c\
+	   mandatory/executor.c\
+	   mandatory/error_utils.c\
+	   
+
 OBJS = $(SRCS:.c=.o)
+
 HEADER = -I.
+
 DEPS = pipex.h
+
 CC = cc
+
 CFLAGS = -Wall -Wextra -Werror -fsanitize=address 
 # -fsanitize=address
 

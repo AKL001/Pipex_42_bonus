@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "../includes/pipex.h"
+
 
 static int	ft_free_buffer(char *buffer, int i)
 {
